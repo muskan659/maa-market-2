@@ -6,7 +6,7 @@ export default function MarketAnalysis() {
     <section className="py-12 lg:py-24 relative overflow-hidden px-6 lg:px-12" style={{
       background: "conic-gradient(from 75.77deg at 39.29% 71.08%, #BB9B80 0deg, #1F2834 360deg);",
     }}>
-      <div className="container mx-auto" style={{}}>
+      <div className="container mx-auto max-w-6xl" style={{margin: "auto"}}>
         <div className="text-center mb-10 mt-12">
           <h2 className="text-3xl lg:text-5xl font-bold text-white mb-4">
             Market Analysis & Tools

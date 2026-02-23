@@ -3,12 +3,11 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { ArrowRight, Activity, BarChart2, Zap, DollarSign } from "lucide-react";
 
 const Hero = () => {
     return (
         <section className="relative flex flex-col" style={{ background: "linear-gradient(270deg, rgba(44, 53, 63, 0) 0%, #2C353F 100%)" }}>
-            <div className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden" style={{ background: "linear-gradient(270deg, rgba(44, 53, 63, 0) 0%, #2C353F 100%)" }}>
+            <div className="relative h-screen flex flex-col items-center justify-center overflow-hidden" style={{ background: "linear-gradient(270deg, rgba(44, 53, 63, 0) 0%, #2C353F 100%)" }}>
                 {/* Video Background */}
                 <video
                     autoPlay
@@ -28,85 +27,92 @@ const Hero = () => {
                     <div className="absolute bottom-0 left-0 w-1/2 h-1/2 bg-gradient-radial from-blue-900/20 to-transparent blur-[80px]" />
                 </div>
 
-                <div className="container mx-auto px-6 relative z-10 flex flex-col items-center gap-12 w-full lg:w-[60%] xl:w-[50%]">
-                    {/* Text Content */}
-                    <div className="text-center flex flex-col gap-6">
-                        <div>
-                            <motion.h1
-                                initial={{ opacity: 0, y: 30 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.8 }}
-                                className="text-3xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6"
-                            >
-                                Built for Serious Trading
-                            </motion.h1>
-                            <motion.p
-                                initial={{ opacity: 0, y: 20 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.8, delay: 0.2 }}
-                                className="leading-tight mb-6 text-gray-300"
-                            >
-                                Forex, indices, commodities and crypto CFDs. Competitive spreads. Fast execution. Powerful platforms.
-                            </motion.p>
-                            <br></br>
-                            <motion.div
-                                initial={{ opacity: 0, y: 20 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.8, delay: 0.4 }}
-                                className="flex flex-col sm:flex-row gap-4 justify-center"
-                            >
-                                <Link
-                                    href="#"
-                                    className="text-white hover:bg-primary-hover rounded-full font-bold text-lg transition-all hover:shadow-[0_0_30px_rgba(212,175,55,0.6)] flex items-center justify-center gap-2 group"
-                                    style={{
-                                        background: "linear-gradient(270deg, #9E826A 0%, #CDAC91 100%)",
-                                        padding: '10px 40px'
-                                    }}
-                                >
-                                    Open Live Account
-                                    <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
-                                </Link>
-                                <Link
-                                    href="#"
-                                    className="hover:text-white px-8 py-4 rounded-full font-medium text-lg transition-all text-white flex items-center justify-center"
-                                >
-                                    Try Demo
-                                </Link>
-                            </motion.div>
+                <div className="container mx-auto px-6 relative z-10 flex flex-col items-center justify-between max-w-7xl h-[700px]" style={{margin:"auto"}}>
+                    {/* Text Content - Upper Section */}
+                    <div className="text-center flex flex-col items-center pt-20 md:pt-32">
+                        <motion.h1
+                            initial={{ opacity: 0, y: 30 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.8 }}
+                            className="text-5xl md:text-6xl lg:text-7xl font-semibold text-white mb-6"
+                            style={{ lineHeight: "1" }}
+                        >
+                            Built for<br />Serious Trading
+                        </motion.h1>
+                        <br></br>
+                           <br></br>
+                        <motion.p
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.8, delay: 0.2 }}
+                            className="text-white text-base md:text-lg mb-10 max-w-3xl leading-relaxed"
+                        >
+                            Forex, indices, commodities and crypto CFDs. Competitive spreads.<br />
+                            Fast execution. Powerful platforms.
+                        </motion.p>
+                           <br></br>
 
-                        </div>
-
-                        {/* Stats */}
-                        <div>
-                            <motion.div
-                                initial={{ opacity: 0, y: 20 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.8, delay: 0.6 }}
-                                className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6 border-t border-white/10 pt-8"
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.8, delay: 0.4 }}
+                            className="flex flex-col sm:flex-row gap-4 justify-center"
+                        >
+                            <Link
+                                href="#"
+                                className="text-white rounded-full font-bold text-sm md:text-base uppercase transition-all hover:opacity-90 px-10 py-4"
+                                style={{
+                                    background: "linear-gradient(270deg, #9E826A 0%, #CDAC91 100%)"
+                                }}
                             >
-                                {[
-                                    { label: "Markets", value: "300+", icon: Activity },
-                                    { label: "Spreads", value: "0.0 pips", icon: BarChart2 },
-                                    { label: "Leverage", value: "500:1", icon: Zap },
-                                    { label: "Commission", value: "$0", icon: DollarSign },
-                                ].map((stat, index) => (
-                                    <div key={index} className="text-center md:text-left" style={{
-                                        border: "1px solid rgba(255,255,255,0.1)",
-                                        borderRadius: "12px",
-                                        padding: "20px",
-                                        background: "rgba(178, 151, 125, 0.2)",
-                                        backdropFilter: "blur(10px)"
-                                    }}>
-                                        <div className="text-white font-bold text-2xl md:text-3xl mb-1">{stat.value}</div>
-                                        <div className="text-white/70 text-sm uppercase tracking-wider font-medium flex items-center justify-center md:justify-start gap-2">
-
-                                            {stat.label}
-                                        </div>
-                                    </div>
-                                ))}
-                            </motion.div>
-                        </div>
+                                OPEN LIVE ACCOUNT
+                            </Link>
+                            <Link
+                                href="#"
+                                className="text-white px-8 py-4 rounded-full font-medium text-sm md:text-base uppercase transition-all hover:opacity-80 underline"
+                            >
+                                TRY DEMO
+                            </Link>
+                        </motion.div>
                     </div>
+
+                    {/* Stats - Lower Section */}
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8, delay: 0.6 }}
+                        className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 w-full max-w-6xl mb-20 md:mb-24"
+                    >
+                        {[
+                            { label: "Markets to trade", value: "300+" },
+                            { label: "Starting spreads", value: "0.0 pips" },
+                            { label: "Flexible leverage", value: "500:1" },
+                            { label: "Commission (from)", value: "$0" },
+                        ].map((stat, index) => (
+                            <div 
+                                key={index} 
+                                className="rounded-xl"
+                                style={{
+                                    width: "280px",
+                                    height: "144px",
+                                    background: "rgba(178, 151, 125, 0.3)",
+                                    backdropFilter: "blur(24px)",
+                                    border: "1px solid rgba(178, 151, 125, 0.5)",
+                                    borderRadius: "16px",
+                                    display: "flex",
+                                    flexDirection: "column",
+                                  
+                                    justifyContent: "center",
+                                    padding: "20px"
+                                }}
+                            >
+                                <div className="text-white font-bold text-3xl md:text-4xl lg:text-5xl mb-5" style={{marginBottom:"4px"}}>{stat.value}</div>
+                                <div className="text-white text-xs md:text-sm">
+                                    {stat.label}
+                                </div>
+                            </div>
+                        ))}
+                    </motion.div>
                 </div>
 
                 {/* Economic Ticker at Bottom */}
@@ -114,7 +120,7 @@ const Hero = () => {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ duration: 0.8, delay: 0.5 }}
-                    className="absolute bottom-0 left-0 w-full overflow-hidden bg-[#0B0E14]/80 py-4 border-t border-white/10 backdrop-blur-md"
+                    className="relative bottom-[14px] left-0 w-full overflow-hidden bg-[#0B0E14]/80 py-4 border-t border-white/10 backdrop-blur-md"
                 >
                     <div className="flex animate-scroll whitespace-nowrap">
                         {[...Array(8)].map((_, i) => (
@@ -124,7 +130,6 @@ const Hero = () => {
                                     <span className="text-white font-medium text-lg">1.05650</span>
                                     <span className="text-red-500 text-sm">-0.00265 (-0.25)%</span>
                                     <span className="text-red-500 text-sm h-5 w-5 bg-green-500 rounded-full"></span>
-
                                 </div>
                                 <div className="w-3 h-3 rounded-full bg-blue-500 mx-4" style={{ alignSelf: 'center' }}></div>
                             </React.Fragment>
@@ -132,7 +137,6 @@ const Hero = () => {
                     </div>
                 </motion.div>
             </div>
-
         </section>
     );
 };

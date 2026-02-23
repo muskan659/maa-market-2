@@ -108,10 +108,10 @@ const Navbar = () => {
                                         <ChevronDown size={12} />
                                     </div>
                                 </div>
-                                <div className="border-b border-white my-2 opacity-50" style={{ marginBottom: "5px", marginTop: "10px" }}></div>
+                                <div className="border-b border-white my-2 opacity-50" style={{ marginBottom: "12px", marginTop: "10px" }}></div>
 
                                 <div className="flex w-full items-center ml-4">
-                                    <div className="w-1/3 flex flex-col">
+                                    <div className="w-1/7 flex flex-col">
                                         <img src="logo.svg" alt="" />
                                     </div>
                                     <div className="w-9/12 items-center justify-center gap-3 mx-auto flex" style={{ margin: "0px 50px" }}>
@@ -130,16 +130,17 @@ const Navbar = () => {
                                     <div className="w-1/4 items-center justify-end gap-6 hidden md:flex" style={{ marginLeft: "50px" }}>
                                         <Link
                                             href="#"
-                                            className="text-white hover:text-[#D4AF37] transition-colors font-bold text-sm tracking-wide uppercase"
+                                            className="text-white hover:text-[#D4AF37] transition-colors font-semibold text-sm tracking-wide uppercase"
                                         >
                                             LOGIN
                                         </Link>
                                         <Link
                                             href="#"
-                                            className="px-8 py-3 rounded-full font-bold text-sm tracking-wide uppercase text-white transition-all shadow-lg transform hover:-translate-y-0.5"
+                                            className="px-8 py-3 rounded-full font-semibold text-sm tracking-wide uppercase text-white transition-all shadow-lg transform hover:-translate-y-0.5"
                                             style={{
-                                                background: "linear-gradient(270deg, #9E826A 0%, #CDAC91 100%);",
-                                                padding: "10px",
+                                                    background: "linear-gradient(270deg, #9E826A 0%, #CDAC91 100%)",
+
+                                                    padding: "10px 35px",
                                             }}
                                         >
                                             REGISTER
@@ -177,13 +178,13 @@ const Navbar = () => {
                             <div className="flex flex-col gap-3 mt-4 pt-4 border-t border-white/10">
                                 <Link
                                     href="#"
-                                    className="text-white text-center py-3 font-bold uppercase"
+                                    className="text-white text-center py-3 font-semibold uppercase"
                                 >
                                     LOGIN
                                 </Link>
                                 <Link
                                     href="#"
-                                    className="text-center w-full py-3 rounded-full font-bold uppercase text-white"
+                                    className="text-center w-full py-3 rounded-full font-semibold uppercase text-white"
                                     style={{
                                         background: "linear-gradient(135deg, #C6A678 0%, #A08354 100%)",
                                     }}
